@@ -1,0 +1,15 @@
+name: vpc-repro-test
+region: fra1
+vpc:
+  id: 22ec1543-57f9-4aa1-bdc1-a3f52ecc44ad
+services:
+  - name: web
+    github:
+      repo: Ruchi-119/appplateform
+      branch: main
+    build_command: ""
+    run_command: "python3 -m http.server 8080"
+    envs: []
+    instance_size_slug: basic-xxs
+    instance_count: 1
+    http_port: 8080
